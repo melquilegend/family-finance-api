@@ -45,6 +45,7 @@ app.use('/api/savings', require('./routes/savings'));
 app.use('/api/goals', require('./routes/goals'));
 app.use('/api/tasks', require('./routes/tasks'));
 app.use('/api/categories', require('./routes/categories'));
+app.use('/api/ai', require('./routes/ai'));
 
 // Health check endpoint
 app.get('/health', (req, res) => {
