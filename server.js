@@ -19,8 +19,6 @@ const limiter = rateLimit({
 });
 app.use('/api/', limiter);
 
-import cors from 'cors';
-
 const allowedOrigins = ['https://family-finance-ui.onrender.com'];
 
 app.use(cors({
