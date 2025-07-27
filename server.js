@@ -19,11 +19,15 @@ const limiter = rateLimit({
 });
 app.use('/api/', limiter);
 
-// CORS configuration
+import cors from 'cors';
+
+const allowedOrigins = ['https://family-finance-ui.onrender.com'];
+
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:5173',
+  origin: allowedOrigins,
   credentials: true
 }));
+
 
 // Body parsing middleware
 app.use(express.json({ limit: '10mb' }));
